@@ -22,7 +22,7 @@
                                     <div>
                                         <label for="qty" class="form-label fw-bold fs-5">Atur Jumlah</label>
                                         <input type="number" class="form-control" id="qty" name="quantity"
-                                            value="1" min="1" max="{{ $product->stock }}" />
+                                            value="1" min="1" max="{{ $product->stock - 5 }}" />
                                     </div>
                                 </form>
                                 <span class="fs-5 fw-light">Stock Total: {{ $product->stock }}</span>
@@ -39,8 +39,8 @@
                             <input type="hidden" name="quantity" value="1" id="hiddenQuantity">
                             <button class="btn btn-md button-primary mt-2 w-100" id="cartButton">Keranjang</button>
                         </form>
-                        <div id="error-message" class="text-danger mt-2" style="display: none;">Jumlah produk harus lebih
-                            dari 10.</div>
+                        <div id="error-message" class="text-danger mt-2" style="display: none;">Jumlah produk tidak boleh
+                            melebihi stok yang tersedia dan harus menyisakan minimal 5 buah stok.</div>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,8 @@
         document.getElementById('cartForm').addEventListener('submit', function(event) {
             event.preventDefault();
             let quantity = document.getElementById('qty').value;
-            if (quantity <= 10) {
+            let stock = {{ $product->stock }};
+            if (quantity > stock - 5) {
                 document.getElementById('error-message').style.display = 'block';
                 return false;
             } else {
