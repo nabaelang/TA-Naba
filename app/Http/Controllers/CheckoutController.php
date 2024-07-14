@@ -59,6 +59,7 @@ class CheckoutController extends Controller
     public function checkoutProcess(Request $request)
     {
         $user = Auth::user();
+        // dd($request);
 
         // Checkout Process
         $transaction_code = 'TRANS-' . mt_rand(000, 999);
@@ -81,7 +82,7 @@ class CheckoutController extends Controller
             'city' => $request->city,
             'address' => Auth::user()->address,
             'status_payment' => 'Pending',
-            'status_shipping' => 'Pending',
+            'status_shipping' => 'disiapkan',
             'grand_total' => $request->grand_total
         ]);
 

@@ -125,9 +125,11 @@
                                                 @endforeach
                                             @endforeach
                                         @endforeach
-                                        <input type="hidden" name="courier" value="{{ session('courier') }}">
-                                        <input type="hidden" name="province" value="{{ session('province') }}">
-                                        <input type="hidden" name="city" value="{{ session('city') }}">
+                                        <input type="hidden" name="courier" id="courier" value="{{ session('courier') }}">
+                                        {{-- <input type="hidden" name="province" value="{{ session('province') }}">
+                                        <input type="hidden" name="city" value="{{ session('city') }}"> --}}
+                                        <input type="hidden" name="province" value="{{ session('province') }}" id="province">
+                                        <input type="hidden" name="city" value="{{ session('city') }}" id="city">
                                         <input type="hidden" name="weight" value="{{ session('weight') }}">
                                         <input type="hidden" name="selected_service" id="selectedService">
                                         <input type="hidden" name="shipping_cost_value" id="shippingCostValue">
