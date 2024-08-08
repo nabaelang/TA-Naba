@@ -108,4 +108,14 @@ class ProductController extends Controller
         Product::destroy($id);
         return redirect('/admin/product');
     }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+        $products = Product::where('name', 'LIKE', "%{$query}%")
+            ->orWhere('description', 'LIKE', "%{$query}%")
+            ->get();
+
+        return view('pembeli.search-results', compact('products'));
+    }
 }

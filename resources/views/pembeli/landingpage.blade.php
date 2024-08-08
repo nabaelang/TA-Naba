@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <div class="lc-block">
-                        <a class="btn button-primary btn-md" href="#" role="button">Jelajahi</a>
+                        <a class="btn button-primary btn-md" href="/product" role="button">Jelajahi</a>
                     </div>
                 </div>
             </div>

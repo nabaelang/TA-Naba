@@ -67,6 +67,7 @@ Route::prefix('admin')->middleware('auth:admin')->group(function () {
 Route::get('/', [PageController::class, 'landingPage']);
 Route::get('/product', [PageController::class, 'productPage']);
 Route::get('/product/{id}', [PageController::class, 'productDetailPage']);
+Route::get('/search', [ProductController::class, 'search'])->name('search');
 
 // CUSTOMER
 Route::middleware('auth:web')->group(function () {

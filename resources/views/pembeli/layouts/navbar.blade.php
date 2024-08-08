@@ -10,14 +10,15 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <div class="w-100 my-lg-0 my-3 ml-lg-0 mr-5">
-                                <input class="form-control w-100" placeholder="Search" />
-                            </div>
-                        </div>
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 w-100">
+                    <li class="nav-item w-100">
+                        <form class="d-flex" action="{{ route('search') }}" method="GET">
+                            <input class="form-control w-80" type="search" placeholder="Search" name="query"
+                                aria-label="Search" value="{{ request()->input('query') }}">
+                        </form>
                     </li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active fw-bold" aria-current="page" href="/">Home</a>
                     </li>
