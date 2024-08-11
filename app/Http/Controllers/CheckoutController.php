@@ -58,6 +58,8 @@ class CheckoutController extends Controller
 
     public function checkoutProcess(Request $request)
     {
+
+        // dd($request->all());
         $user = Auth::user();
         // dd($request);
 
@@ -138,7 +140,9 @@ class CheckoutController extends Controller
                 'address' => Auth::user()->address,
             ],
             'enabled_payments' => [
-                'gopay', 'permata_va', 'bank_transfer'
+                'gopay',
+                'permata_va',
+                'bank_transfer'
             ],
             'vtweb' => []
         ];

@@ -81,7 +81,7 @@
                                     @endforeach
                                     <label class="form-label" for="weight">Total Berat Barang (gr)</label>
                                     <input class="form-control text-muted" type="number" id="weight" name="weight"
-                                        value="{{ $weight }}">
+                                        value="{{ $weight }}" readonly>
                                 </div>
 
                                 <div class="col-lg-6 mb-3">
@@ -262,8 +262,8 @@
                             <h6>${item.name}</h6>
                             ${item.costs.map(cost => {
                                 return `
-                                        ${cost.cost.map(harga => {
-                                            return `
+                                            ${cost.cost.map(harga => {
+                                                return `
                                             <div class="form-check">
                                                 <input class="form-check-input shipping-option" type="radio" name="shipping_cost" value="${harga.value}" data-service="${cost.service}" data-cost="${harga.value}">
                                                 <label class="form-check-label">
@@ -271,8 +271,8 @@
                                                 </label>
                                             </div>
                                         `;
-                                        }).join('')}
-                                    `;
+                                            }).join('')}
+                                        `;
                             }).join('')}
                         `;
                             }).join('');
