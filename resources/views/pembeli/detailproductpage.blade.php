@@ -53,6 +53,19 @@
                     </p>
                 </div>
             </div>
+            <div class="row mt-lg-3 mt-md-4 my-5">
+                <div class="col col-lg-10 col-xl-8">
+                    <p class="text-secondary">Ulasan Product</p>
+                    <hr />
+                    @foreach ($product->reviews as $review)
+                        <div class="review mb-3">
+                            <p><strong>{{ $review->user->name }}</strong></p>
+                            <p>{{ $review->review }}</p>
+                            <hr>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
         </div>
     </section>
 

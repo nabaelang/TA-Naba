@@ -72,6 +72,34 @@
                         </table>
                     </div>
                 </div>
+                <div class="review-section mt-5">
+                    <h5 class="font-weight-bold text-primary">Beri Ulasan untuk Produk</h5>
+                    @foreach ($details as $detail)
+                        <div class="mb-3">
+                            <h6>{{ $detail->product->name }}</h6>
+                            @php
+                                // Cek apakah user sudah memberikan ulasan untuk produk ini
+                                $userReview = $detail->product->reviews()->where('user_id', Auth::id())->first();
+                            @endphp
+
+                            @if ($userReview)
+                                <div class="alert alert-success">
+                                    <p>Anda sudah memberikan ulasan untuk produk ini:</p>
+                                    <p><strong>{{ $userReview->review }}</strong></p>
+                                </div>
+                            @else
+                                <form action="{{ route('customer.review.store', $detail->product->id) }}" method="POST">
+                                    @csrf
+                                    <div class="form-group">
+                                        <textarea name="review" class="form-control" rows="3" placeholder="Tulis ulasan Anda di sini"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary mt-2">Kirim Ulasan</button>
+                                </form>
+                            @endif
+                        </div>
+                    @endforeach
+                </div>
+
             </div>
         </div>
     </div>

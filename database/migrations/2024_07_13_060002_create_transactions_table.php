@@ -26,7 +26,7 @@ return new class extends Migration
             $table->integer('city');
             $table->text('address');
             $table->enum('status_payment', array('pending', 'success', 'failed', 'expired'));
-            $table->enum('status_shipping', array('disiapkan', 'dikirim', 'selesai'));
+            $table->enum('status_shipping', array('pending', 'disiapkan', 'dikirim', 'selesai'));
             // $table->string('snap_token')->nullable();
             $table->bigInteger('grand_total');
             $table->timestamps();

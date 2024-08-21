@@ -39,7 +39,7 @@ class PageController extends Controller
 
     public function productDetailPage($id)
     {
-        $product = Product::findOrFail($id);
+        $product = Product::with('reviews')->findOrFail($id);
 
         return view('pembeli.detailproductpage', ['product' => $product]);
     }

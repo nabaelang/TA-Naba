@@ -23,21 +23,27 @@
                                                     <div class="d-flex flex-column">
                                                         <h5 class="mb-2">{{ $transaction->transaction_code }}</h5>
                                                         <p class="text-muted mb-1">{{ $transaction->created_at }}</p>
-                                                        <p
-                                                            class="badge mb-1 
+                                                        <div>
+                                                            <span>Status Pembayaran</span>
+                                                            <p
+                                                                class="badge mb-1 
                                                             @if ($transaction->status_payment == 'success') bg-primary 
                                                             @elseif($transaction->status_payment == 'pending') bg-warning 
                                                             @elseif($transaction->status_payment == 'Cancelled') bg-danger @endif">
-                                                            {{ $transaction->status_payment }}
-                                                        </p>
-                                                        <p
-                                                            class="badge mb-1
+                                                                {{ $transaction->status_payment }}
+                                                            </p>
+                                                        </div>
+                                                        <div>
+                                                            <span>Status Pengiriman</span>
+                                                            <p
+                                                                class="badge mb-1
                                                             @if ($transaction->status_shipping == 'selesai') bg-success
                                                             @elseif($transaction->status_shipping == 'dikirim') bg-primary
                                                             @elseif($transaction->status_shipping == 'disiapkan') bg-warning
                                                             @elseif($transaction->status_shipping == 'pending') bg-secondary @endif">
-                                                            {{ $transaction->status_shipping }}
-                                                        </p>
+                                                                {{ $transaction->status_shipping }}
+                                                            </p>
+                                                        </div>
                                                     </div>
                                                     <div class="text-end">
                                                         <h5 class="text-start mb-3">

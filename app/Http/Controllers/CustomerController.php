@@ -10,7 +10,7 @@ class CustomerController extends Controller
 {
     public function index()
     {
-        $transactions = Transaction::where('user_id', Auth::user()->id)->where('status_payment', 'success')->get();
+        $transactions = Transaction::where('user_id', Auth::user()->id)->where('status_payment', 'success')->orderBy('id', 'desc')->get();
         return view("pembeli.transaction", compact("transactions"));
     }
 

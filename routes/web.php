@@ -13,6 +13,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,4 +88,6 @@ Route::middleware('auth:web')->group(function () {
     Route::get('/profile', [CustomerController::class, 'profile'])->name('profile.show');
     Route::get('/profile/edit', [CustomerController::class, 'edit'])->name('profile.edit');
     Route::post('/profile/edit', [CustomerController::class, 'update'])->name('profile.update');
+    // Review
+    Route::post('/review/{product}', [ReviewController::class, 'store'])->name('customer.review.store');
 });
