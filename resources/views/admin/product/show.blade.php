@@ -58,6 +58,31 @@
                         <!-- End Table with stripped rows -->
                     </div>
                 </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Reveiw Produk {{ $product->name }}</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nama User</th>
+                                    <th scope="col">Isi Ulasan</th>
+                                    <th scope="col">Tanggal Ulasan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($reviews as $review)
+                                    <tr>
+                                        <th scope="row">{{ $loop->iteration }}</th>
+                                        <td>{{ $review->user->name }}</td>
+                                        <td>{{ $review->review }}</td>
+                                        <td>{{ $review->created_at }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

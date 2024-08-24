@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -53,7 +54,10 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::with('category')->findOrFail($id);
-        return view('admin.product.show', ['product' => $product]);
+        $reviews = Review::with('product', 'user')->where('product_id', $product->id)->get();
+        // dd($reviews);
+
+        return view('admin.product.show', compact('product', 'reviews'));
     }
 
     public function edit($id)
