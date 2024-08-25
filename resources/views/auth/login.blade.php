@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2">
-                                <img src="{{ asset('custom/image/image.png') }}" alt="" class="login-image" />
+                                <img src="{{ asset('custom/image/Image.png') }}" alt="" class="login-image" />
                             </div>
                         </div>
                     </div>
