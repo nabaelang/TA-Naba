@@ -60,7 +60,7 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Reveiw Produk {{ $product->name }}</h5>
+                        <h5 class="card-title">Review Produk {{ $product->name }}</h5>
                         <table class="table">
                             <thead>
                                 <tr>

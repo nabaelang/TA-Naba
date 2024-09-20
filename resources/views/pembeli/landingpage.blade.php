@@ -46,19 +46,12 @@
             <div class="row mx-auto">
                 <div class="col-lg-9 mx-auto">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Doloribus ratione asperiores et deleniti magnam facilis, eveniet
-                        corrupti nemo. Repudiandae cum ullam vero aut corporis fugit alias
-                        accusantium, doloremque corrupti? Assumenda similique deleniti
-                        voluptates impedit. Ipsam laudantium suscipit atque, illo, minus
-                        dignissimos libero tenetur consequatur quo fugit perspiciatis
-                        natus praesentium saepe eius adipisci reiciendis voluptate. Dolor
-                        dolorem soluta illum incidunt perferendis voluptatibus aliquam!
-                        Aut vitae sit ducimus itaque eius, hic aliquid quo praesentium,
-                        ipsum, facilis quas deserunt tenetur cumque similique iure nulla
-                        iusto possimus tempore minima vero! Velit amet maxime animi
-                        provident, suscipit veniam quaerat perspiciatis, nam, at neque
-                        laudantium assumenda!
+                        CV Tajuk adalah perusahaan yang bergerak di bidang furniture dengan dedikasi 
+                        tinggi terhadap kualitas dan inovasi. Sejak berdiri, kami telah berkomitmen 
+                        untuk menghadirkan produk-produk furniture yang tidak hanya fungsional, 
+                        tetapi juga memiliki nilai estetika yang tinggi. Setiap karya yang kami 
+                        hasilkan dirancang dengan teliti oleh tenaga ahli kami yang berpengalaman, 
+                        menggunakan bahan-bahan terbaik untuk memastikan ketahanan dan kepuasan pelanggan.
                     </p>
                 </div>
             </div>
